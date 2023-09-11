@@ -1,0 +1,71 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0rem;
+    background-color: rgb(192, 218, 240);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.tab-bar{
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+}
+
+.tab-bar-item{
+    background-color: bisque;
+    border-radius: 10px 10px 0px 0px;
+    padding: 0px 1rem;
+}
+
+#done{
+    margin-left: auto;
+}
+
+.tab-content{
+    background-color: papayawhip;
+    border-radius: 0px 0px 10px 10px;
+    flex-grow: 1;
+    align-items: center;
+    padding: 2rem;
+}
+.tab-content-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+.tab-content-grid-item{
+    background-color: rgb(255, 206, 214);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 5px;
+}
+button {
+    border: none;
+}
+button.add-item:hover{
+    background-color: rgb(241, 149, 180);
+}
+button.tab-bar-item:hover{
+    color:rgb(214, 36, 95);
+}
+.selected-tab{
+    background-color: papayawhip;
+}
+form{
+    margin: 0;
+}

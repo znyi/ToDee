@@ -1,0 +1,30 @@
+<%-include("partials/header.ejs")%>
+    <div class="container">
+        <form action="/tasks" method="get" class="tab-bar">
+            <% for( let index = 0; index < categories.length; index++ ) { %>
+                <% if (index === selected) { %>
+                    <button type="submit" value=<%= categories[index].categoryName %> name="category" class="tab-bar-item selected-tab" id=`category-<%= categories[index].id %>`>
+                <% } else { %>
+                    <button type="submit" value=<%= categories[index].categoryName %> name="category" class="tab-bar-item" id=`category-<%= categories[index].id %>`>
+                <% } %>
+                        <h4><%=categories[index].categoryName%></h4>
+                    </button>
+            <% } %>
+            <button  type="submit" value="done" name="category" class="tab-bar-item" id="done">
+                <h4>done</h4>
+            </button>
+        </form>
+        <div class="tab-content">
+            <div class="tab-content-grid">
+                <% for( let index = 0; index < todo[selected].length; index++ ) { %>
+                    <div class="tab-content-grid-item todo-item">
+                        <p><%= todo[selected][index] %></p>
+                    </div>
+                <% } %>
+                <button class="tab-content-grid-item add-item">
+                    <h2>+</h2>
+                </button>
+            </div>
+        </div>
+    </div>
+<%-include("partials/footer.ejs")%>
